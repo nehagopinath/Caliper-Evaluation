@@ -1,0 +1,27 @@
+---
+test:
+  clients:
+    type: local
+    number: 10
+
+  rounds:
+  - label: queryAllModels
+    txNumber:
+    - 1000
+    rateControl:
+    - type: fixed-rate
+      opts:
+        tps: 100
+    arguments:
+      assets: 1000
+    callback: ../inventory/blockchain/benchmark/model/queryAllModels.js
+
+
+monitor:
+  type:
+    - process
+  process:
+    - command: node
+      arguments: local-client.js
+      multiOutput: avg
+  interval: 1
