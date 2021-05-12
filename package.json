@@ -23,6 +23,6 @@
     "fabric-client": "^1.4.0",
     "fabric-network": "^1.4.0",
     "fabric-protos": "^2.0.0-snapshot.1",
-    "grpc": "^1.14.2"
+    "grpc": "^1.24.9"
   }
 }
